@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { Logo } from "./logo";
 import { NavItem } from "./nav-item";
+import { UsedSpaceWidget } from "./used-space-widget";
+import { Profile } from "./profile";
 
 export function Sidebar() {
   return (
@@ -41,16 +43,9 @@ export function Sidebar() {
           <NavItem title="Settings" icon={Cog} />
         </nav>
 
-        <div className="flex flex-col gap-4 rounded-lg bg-violet-50 px-4 py-5">
-          <div className="space-y-1">
-            <span className="text-sm/5 font-medium text-violet-700">
-              Used space
-            </span>
-            <span>
-              Your team has used 80% of your available space. Need more?
-            </span>
-          </div>
-        </div>
+        <UsedSpaceWidget />
+        <div className="h-px bg-zinc-200"></div>
+        <Profile />
       </div>
     </aside>
   );
