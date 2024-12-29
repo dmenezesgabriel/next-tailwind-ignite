@@ -1,8 +1,9 @@
 import { LogOut } from "lucide-react";
+import { Button } from "../button";
 
 export function Profile() {
   return (
-    <div className="grid-cols-profile grid items-center gap-3">
+    <div className="grid grid-cols-profile items-center gap-3">
       <img
         className="h-10 w-10 rounded-full"
         src="https://github.com/dmenezesgabriel.png"
@@ -16,9 +17,9 @@ export function Profile() {
           dmenezes.gabriel@gmail.com
         </span>
       </div>
-      <button type="button" className="ml-auto rounded-md p-2 hover:bg-zinc-50">
+      <Button type="button" variant="ghost">
         <LogOut className="h-5 w-5 text-zinc-500" />
-      </button>
+      </Button>
     </div>
   );
 }
